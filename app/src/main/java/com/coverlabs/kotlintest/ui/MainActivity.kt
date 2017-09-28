@@ -10,6 +10,7 @@ import com.coverlabs.kotlintest.SettingsActivity
 import com.coverlabs.kotlintest.ui.fragment.ItemListFragment
 import com.coverlabs.kotlintest.ui.fragment.dummy.DummyContent
 import com.coverlabs.kotlintest.ui.presenter.MainPresenter
+import com.coverlabs.kotlintest.util.ActivityUtils
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), ItemListFragment.OnListFragmentInteractionListener {
@@ -25,8 +26,8 @@ class MainActivity : AppCompatActivity(), ItemListFragment.OnListFragmentInterac
 
         mPresenter = MainPresenter()
 
-        tv_message.text = getString(R.string.label_test_text)
         bv_navigation.setOnNavigationItemSelectedListener(mPresenter?.getItemSelectedListener(supportFragmentManager))
+        ActivityUtils.replaceFragment(supportFragmentManager, ItemListFragment.newInstance(1), R.id.container_main)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
