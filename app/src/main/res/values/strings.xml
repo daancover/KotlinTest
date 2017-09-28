@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">KotlinTest</string>
+    <string name="title_settings">Settings</string>
+    <string name="label_test_text">This is a test text!</string>
+    <string name="title_home">Home</string>
+    <string name="title_search">Search</string>
+    <string name="title_favorites">Favorites</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
